@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bases Numéricas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CONVERSOR DE BASES NUMÉRICAS</h1>
+    <div class="Section">
+        <h2>Decimal - Binário</h2>
+        <label for="decimal">Decimal</label>
+            <input type="number" name="decimal" id="dec1" min=0 onkeyup="decBin()" onchange="decBin()">
+
+        <label for="bin">Binário</label>
+            <input type="number" name="binario" id="bin" min=0 onkeyup="binDec()" onchange="binDec()">
+        <div id="erro1" class='erro'>
+
+        </div>
+    </div>
+    
+    <div class="Section">
+        <h2>Decimal - Octal</h2>
+        <label for="decimal">Decimal</label>
+            <input type="number" name="decimal" id="dec2" min=0 onkeyup="decOct()" onchange="decOct()">
+
+        <label for="octal">Octal</label>
+            <input type="number" name="octal" id="oct" min=0 onkeyup="octDec()" onchange="octDec()">
+        <div id="erro2" class="erro">
+
+        </div>
+    </div>
+        
+    <script src="main.js"></script>
+</body>
+</html>
