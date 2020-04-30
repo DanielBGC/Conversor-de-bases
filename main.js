@@ -1,8 +1,7 @@
 function decBin() {
     var dec = document.getElementById("dec1").value;
     var binario = document.getElementById("bin");
-
-    var tamanho = dec.length;
+    
     var res='';
     var resto=dec;
     var quociente=dec;
@@ -45,7 +44,6 @@ function decOct() {
     var dec = document.getElementById("dec2").value;
     var octal = document.getElementById("oct");
 
-    var tamanho = dec.length;
     var res='';
     var resto=dec;
     var quociente=dec;
