@@ -5,8 +5,6 @@
 <p align="center">
  <img src="https://github.com/DanielBGC/Conversor-de-bases/blob/master/conversor.png">
 </p>
-  
-![Tabela de conversão de bases numéricas](https://github.com/DanielBGC/Conversor-de-bases/blob/master/conversor.png)
     
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
