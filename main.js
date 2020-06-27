@@ -87,63 +87,75 @@ function decHex() {
     let dec = document.getElementById("dec3").value;
     let hex = document.getElementById("hex");
 
-    let inteiro = 0;
-    let resto = 0;
-    let letra;
-    let letra2;
+    dec = parseInt(dec).toString(16)
 
-    if(dec < 16) {
-        if(dec >= 10) {
-            letra = dec == 10 ? 'A' : 
-                    dec == 11 ? 'B' :
-                    dec == 12 ? 'C' :
-                    dec == 13 ? 'D' :
-                    dec == 14 ? 'E' : 
-                    dec == 15 ? 'F' : '';
+    hex.value = "" + dec.toUpperCase()
+    
+    // let inteiro = 0;
+    // let resto = 0;
+    // let letra;
+    // let letra2;
+    // if(dec < 16) {
+    //     if(dec >= 10) {
+    //         letra = dec == 10 ? 'A' : 
+    //                 dec == 11 ? 'B' :
+    //                 dec == 12 ? 'C' :
+    //                 dec == 13 ? 'D' :
+    //                 dec == 14 ? 'E' : 
+    //                 dec == 15 ? 'F' : '';
 
-            hex.value = letra;
-        }
-        else 
-            hex.value = dec;
-    }
-    if(dec >= 16 && dec <= 159) {
-        inteiro = parseInt(dec/16);
-        resto = dec - inteiro*16;
+    //         hex.value = letra;
+    //     }
+    //     else 
+    //         hex.value = dec;
+    // }
+    // if(dec >= 16 && dec <= 159) {
+    //     inteiro = parseInt(dec/16);
+    //     resto = dec - inteiro*16;
 
-        letra = resto == 10 ? 'A' : 
-                resto == 11 ? 'B' :
-                resto == 12 ? 'C' :
-                resto == 13 ? 'D' :
-                resto == 14 ? 'E' : 
-                resto == 15 ? 'F' : '';
+    //     letra = resto == 10 ? 'A' : 
+    //             resto == 11 ? 'B' :
+    //             resto == 12 ? 'C' :
+    //             resto == 13 ? 'D' :
+    //             resto == 14 ? 'E' : 
+    //             resto == 15 ? 'F' : '';
 
-        if(resto <= 9)
-            hex.value =  inteiro + "" + resto; 
-        else
-            hex.value = inteiro + "" + letra;
-    }
-    if(dec >= 160) {
-        inteiro = parseInt(dec/16);
-        resto = dec - inteiro*16;
+    //     if(resto <= 9)
+    //         hex.value =  inteiro + "" + resto; 
+    //     else
+    //         hex.value = inteiro + "" + letra;
+    // }
+    // if(dec >= 160) {
+    //     inteiro = parseInt(dec/16);
+    //     resto = dec - inteiro*16;
 
-        letra = resto == 10 ? 'A' : 
-                resto == 11 ? 'B' :
-                resto == 12 ? 'C' :
-                resto == 13 ? 'D' :
-                resto == 14 ? 'E' : 
-                resto == 15 ? 'F' : '';
+    //     letra = resto == 10 ? 'A' : 
+    //             resto == 11 ? 'B' :
+    //             resto == 12 ? 'C' :
+    //             resto == 13 ? 'D' :
+    //             resto == 14 ? 'E' : 
+    //             resto == 15 ? 'F' : '';
 
-        letra2 = inteiro == 10 ? 'A' : 
-                inteiro == 11 ? 'B' :
-                inteiro == 12 ? 'C' :
-                inteiro == 13 ? 'D' :
-                inteiro == 14 ? 'E' : 
-                inteiro == 15 ? 'F' : '';
+    //     letra2 = inteiro == 10 ? 'A' : 
+    //             inteiro == 11 ? 'B' :
+    //             inteiro == 12 ? 'C' :
+    //             inteiro == 13 ? 'D' :
+    //             inteiro == 14 ? 'E' : 
+    //             inteiro == 15 ? 'F' : '';
 
 
-        if(resto <= 9)
-            hex.value =  letra2 + "" + resto; 
-        else
-            hex.value = letra2 + "" + letra;
-    }
+    //     if(resto <= 9)
+    //         hex.value =  letra2 + "" + resto; 
+    //     else
+    //         hex.value = letra2 + "" + letra;
+    // }
+}
+
+function hexDec() {
+    let hex = document.getElementById("hex").value;
+    let dec = document.getElementById("dec3");
+
+    hex = parseInt(hex, 16)
+
+    dec.value = "" + hex
 }
